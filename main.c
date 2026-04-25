@@ -8,7 +8,6 @@ struct Student {
     float grade;
 };
 
-// ID kontrolü
 int idExists(int id) {
     FILE *fp = fopen("students.dat", "rb");
     if (fp == NULL) return 0;
@@ -24,7 +23,6 @@ int idExists(int id) {
     return 0;
 }
 
-// Öğrenci ekle
 void addStudent() {
     struct Student s;
 
@@ -54,7 +52,6 @@ void addStudent() {
     printf("Ogrenci eklendi!\n");
 }
 
-// Listele
 void listStudents() {
     FILE *fp = fopen("students.dat", "rb");
 
@@ -75,7 +72,6 @@ void listStudents() {
     fclose(fp);
 }
 
-// Ara
 void searchStudent() {
     FILE *fp = fopen("students.dat", "rb");
 
@@ -104,7 +100,6 @@ void searchStudent() {
     fclose(fp);
 }
 
-// Sil
 void deleteStudent() {
     FILE *fp = fopen("students.dat", "rb");
     FILE *temp = fopen("temp.dat", "wb");
@@ -140,7 +135,6 @@ void deleteStudent() {
         printf("Ogrenci bulunamadi!\n");
 }
 
-// Güncelle
 void updateStudent() {
     FILE *fp = fopen("students.dat", "rb+");
 
@@ -178,7 +172,6 @@ void updateStudent() {
     fclose(fp);
 }
 
-// Ortalama
 void calculateAverage() {
     FILE *fp = fopen("students.dat", "rb");
 
@@ -204,7 +197,6 @@ void calculateAverage() {
     fclose(fp);
 }
 
-// Menü
 void menu() {
     int choice;
 
